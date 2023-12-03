@@ -31,83 +31,83 @@ export class ApiconsumeService {
   }
 
   signin(user: any):Observable<any> {
-   return  this.http.post<any>('http://localhost:3001/login', user);
+   return  this.http.post<any>('https://elearning-backend-vcso.onrender.com/login', user);
   }
  
   signup(user:any):Observable<any>{
-    return this.http.post<any>("http://localhost:3001/signup", user);
+    return this.http.post<any>("https://elearning-backend-vcso.onrender.com/signup", user);
   }
 
   uploadFile(user:any):Observable<any>{
-    return this.http.post<any>("http://localhost:3001/uploads", user);
+    return this.http.post<any>("https://elearning-backend-vcso.onrender.com/uploads", user);
   }
 
   getAllUser():Observable<any>{
-    return this.http.get<any>("http://localhost:3001/getall");
+    return this.http.get<any>("https://elearning-backend-vcso.onrender.com/getall");
   }
   createtraining(data:any):Observable<any>{
-    return this.http.post<any>("http://localhost:3001/createtraining", data);
+    return this.http.post<any>("https://elearning-backend-vcso.onrender.com/createtraining", data);
   }
   createtrainings(data:any):Observable<any>{
-    return this.http.post<any>("http://localhost:3001/formationss", data);
+    return this.http.post<any>("https://elearning-backend-vcso.onrender.com/formationss", data);
   }
   createuser(data:any):Observable<any>{
-    return this.http.post<any>("http://localhost:3001/createuser", data);
+    return this.http.post<any>("https://elearning-backend-vcso.onrender.com/createuser", data);
   }
   getAlltraining():Observable<any>{
-    return this.http.get<any>("http://localhost:3001/getalltrainings");
+    return this.http.get<any>("https://elearning-backend-vcso.onrender.com/getalltrainings");
   }
   
 
 
 
   getoneuser(id:any):Observable<any>{
-    return this.http.get<any>("http://localhost:3001/"+id);
+    return this.http.get<any>("https://elearning-backend-vcso.onrender.com/"+id);
   }
   updateoneuser(id:any,data:any):Observable<any>{
-    return this.http.put<any>("http://localhost:3001/"+id,data);
+    return this.http.put<any>("https://elearning-backend-vcso.onrender.com/"+id,data);
   }
 
 
   getallteacher():Observable<any>{
-    return this.http.get("http://localhost:3001/getteacher")
+    return this.http.get("https://elearning-backend-vcso.onrender.com/getteacher")
   }
 
   
   deleteoneuser(id:any):Observable<any>{
-    return this.http.delete("http://localhost:3001/"+id)
+    return this.http.delete("https://elearning-backend-vcso.onrender.com/"+id)
   }
   deleteonetraining(id:any):Observable<any>{
-    return this.http.delete("http://localhost:3001/training/"+id)
+    return this.http.delete("https://elearning-backend-vcso.onrender.com/training/"+id)
   }
   getonetraining(id:any):Observable<any>{
-    return this.http.get("http://localhost:3001/training/"+id)
+    return this.http.get("https://elearning-backend-vcso.onrender.com/training/"+id)
   }
   updateonetraining(id:any,data:any):Observable<any>{
-    return this.http.put("http://localhost:3001/training/"+id,data)
+    return this.http.put("https://elearning-backend-vcso.onrender.com/training/"+id,data)
   }
 
   createcomment(data:any):Observable<any>{
-    return this.http.post("http://localhost:3001/comments/new",data)
+    return this.http.post("https://elearning-backend-vcso.onrender.com/comments/new",data)
   }
   updateFormation(id:any,data:any):Observable<any>{
-    return this.http.put("http://localhost:3001/formation/"+id,data)
+    return this.http.put("https://elearning-backend-vcso.onrender.com/formation/"+id,data)
   }
   postQuizQuestions(questions: any):Observable<any> {
-    return this.http.post<any>("http://localhost:3001/quiz", questions);
+    return this.http.post<any>("https://elearning-backend-vcso.onrender.com/quiz", questions);
   }
   updateuserF(id:any,formations:any):Observable<any> {
-    return this.http.put<any>("http://localhost:3001/traininguser/"+id,{formations});
+    return this.http.put<any>("https://elearning-backend-vcso.onrender.com/traininguser/"+id,{formations});
   }
   
   getcomment(id:any):Observable<any>{
-    return this.http.get("http://localhost:3001/comments/formation/"+id+"/comments")
+    return this.http.get("https://elearning-backend-vcso.onrender.com/comments/formation/"+id+"/comments")
   }
   getcourses(id:any):Observable<any>{
-    return this.http.get("http://localhost:3001/users/"+id+"/pdf-formations")
+    return this.http.get("https://elearning-backend-vcso.onrender.com/users/"+id+"/pdf-formations")
   }
   getquiz(id:any):Observable<any>{
-    return this.http.get("http://localhost:3001/formations/"+id+"/quizzes")
+    return this.http.get("https://elearning-backend-vcso.onrender.com/formations/"+id+"/quizzes")
   }
 
   

@@ -6,13 +6,13 @@ import { Observable } from 'rxjs';
 })
 export class PdfService {
 
-  urls = 'http://localhost:3001/';
+  urls = 'https://elearning-backend-vcso.onrender.com/';
 
   constructor(private http : HttpClient) {  } 
 
   uploadpdf(pdf:any):Observable<any>{
 
-    return this.http.post<any>("http://localhost:3001/uploadpdf",pdf);
+    return this.http.post<any>("https://elearning-backend-vcso.onrender.com/uploadpdf",pdf);
   }
   
   
@@ -29,7 +29,7 @@ export class PdfService {
   }
 
   getoneformationpdf(id:any):Observable<any>{
-    return this.http.get<any>("http://localhost:3001/"+id);
+    return this.http.get<any>("https://elearning-backend-vcso.onrender.com/"+id);
   }
 
 
