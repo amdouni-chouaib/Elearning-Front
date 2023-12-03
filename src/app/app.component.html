@@ -1,0 +1,18 @@
+<div *ngIf="role==='admin'" style="display: flex;">
+    <div>
+        <app-sidebaradmin ></app-sidebaradmin>
+    </div>
+    <div style="width: 100% !important">     
+        <router-outlet ></router-outlet>
+    </div>
+
+</div>
+<div *ngIf="role==='student' || role==='teacher' || role===null">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+
+</div>
+<!-- <router-outlet></router-outlet> -->
+<app-footer></app-footer>
+
+
